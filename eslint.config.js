@@ -12,13 +12,21 @@ module.exports = tseslint.config(
 			...tseslint.configs.stylistic,
 			...angular.configs.tsRecommended,
 		],
+		languageOptions: {
+			globals: {
+				describe: 'readonly',
+				it: 'readonly',
+				expect: 'readonly',
+				beforeEach: 'readonly',
+			},
+		},
 		processor: angular.processInlineTemplates,
 		rules: {
 			'@angular-eslint/directive-selector': [
 				'error',
 				{
 					type: 'attribute',
-					prefix: 'lm',
+					prefix: 'app',
 					style: 'camelCase',
 				},
 			],
@@ -26,7 +34,7 @@ module.exports = tseslint.config(
 				'error',
 				{
 					type: 'element',
-					prefix: 'lm',
+					prefix: 'app',
 					style: 'kebab-case',
 				},
 			],
