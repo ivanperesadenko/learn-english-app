@@ -1,0 +1,16 @@
+<li class="sidebar-link">
+  <a #anchorElement
+     [class.bottom-divider]="!anchorElement.classList.contains('__active') && !isLastLink"
+     class="flex justify-items-start gap-2 items-center w-full pl-6 pt-4 pb-4 text-center"
+     [routerLink]="[link.routerLinkPath]"
+     [routerLinkActive]="['__active']"
+     [routerLinkActiveOptions]="{ exact: true }"
+     matRipple
+     [matRippleColor]="'var(--color-blue-400-30)'"
+     [matRippleDisabled]="anchorElement.classList.contains('__active')">
+
+    <mat-icon>{{ link.icon }}</mat-icon>
+    {{ link.title }}
+
+  </a>
+</li>

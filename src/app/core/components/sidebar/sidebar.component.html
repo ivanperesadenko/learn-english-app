@@ -1,0 +1,8 @@
+<ul class="flex flex-col w-full">
+  @for (sidebarLink of links; track sidebarLink.title; let index = $index) {
+    <app-sidebar-link
+      [link]="sidebarLink"
+      [isLastLink]="index + 1 === links.length">
+    </app-sidebar-link>
+  }
+</ul>
