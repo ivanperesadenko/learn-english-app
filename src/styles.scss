@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/angular-material-global-styles.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,4 +12,23 @@ body {
 body {
 	margin: 0;
 	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+:root {
+	--color-white: #fff;
+
+	--color-blue-100: #d7e3ff;
+	--color-blue-200: #a9b8da;
+	--color-blue-400: rgb(27, 105, 190);
+	--color-blue-400-30: rgba(27, 105, 190, 0.3);
+	--color-blue-500: #005cbb;
 }
