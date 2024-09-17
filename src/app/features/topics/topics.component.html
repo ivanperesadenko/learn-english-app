@@ -1,1 +1,7 @@
-<p>topics works!</p>
+@if (loading$ | async) {
+  loading...
+} @else if (isEmptyTopicsList$ | async) {
+  empty list message
+} @else {
+  <app-topics-list [topics]="topicsList$ | async"></app-topics-list>
+}

@@ -55,6 +55,7 @@
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.9.0",
     "husky": "^8.0.0",
     "jasmine-core": "~5.2.0",
     "karma": "~6.4.0",

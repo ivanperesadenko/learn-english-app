@@ -1,0 +1,14 @@
+mat-card:hover {
+	background-color: var(--color-blue-100);
+	transition: 0.3s;
+}
+
+h6 {
+	font-size: 20px;
+}
+
+.card-container {
+	padding: 14px;
+	display: flex;
+	flex-direction: column;
+}

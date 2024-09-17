@@ -1,0 +1,5 @@
+@if (topics) {
+  @for (topic of topics; track topic.id) {
+    <app-topic-card [topic]="topic"></app-topic-card>
+  }
+}

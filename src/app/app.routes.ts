@@ -1,18 +1,11 @@
 import { Routes } from '@angular/router';
+import { TOPICS_ROUTES } from './features/topics/routes/topics-routes';
 
 export const routes: Routes = [
 	{
 		path: '',
 		pathMatch: 'full',
 		redirectTo: 'topics',
-	},
-	{
-		path: 'topics',
-		data: {
-			tabTitle: 'Topics',
-		},
-		loadComponent: () =>
-			import('./features/topics/topics.component').then((m) => m.TopicsComponent),
 	},
 	{
 		path: 'page-not-found',
@@ -24,6 +17,7 @@ export const routes: Routes = [
 				(m) => m.PageNotFoundComponent
 			),
 	},
+	...TOPICS_ROUTES,
 	{
 		path: '**',
 		redirectTo: 'page-not-found',
